@@ -140,7 +140,7 @@ async function loadSass() {
     progress.start()
     const [Sass] = await Promise.all([
       import('../../static/vendor/sass/sass'),
-      import(/* webpackChunkName: "codemirror-mode" */ 'codemirror/mode/sass/sass.js')
+      import('codemirror/mode/sass/sass.js')
     ])
     Sass.setWorkerUrl('/vendor/sass/sass.worker.js')
     transformers.set('sass', new Sass())
