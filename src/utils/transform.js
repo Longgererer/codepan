@@ -31,7 +31,6 @@ export async function js({ code, transformer }) {
         module: 'es2015'
       }
     })
-    console.log(res)
     return res.outputText
   } else if (transformer === 'vue-jsx') {
     return window.Babel.transform(code, {
